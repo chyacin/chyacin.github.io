@@ -1,0 +1,584 @@
+/* ENTETE DE PAGE */
+@font-face {
+    font-family: "titre";
+    src: url("titlePolice.ttf");
+}
+
+@font-face {
+    font-family: "paragraphe";
+    src: url("policeTexte.otf");
+}
+.centered {
+    text-align: center;
+}
+
+.anchor {
+    height: 130px;
+    background-image: url(banner2.jpg);
+}
+
+
+
+
+body {
+    margin: 0px auto;
+    padding: 0px;
+  /* max-width: 1200px;
+    max-height: 1000px;*/
+    background-color: rgb(255, 255, 255);
+}
+
+/* MEDIA QUERIES PARAGRAPHES */
+
+body {font-size: 100%}
+
+p {font-size: 1.5em;}
+
+@media screen and (max-width: 64em) {
+ body {
+      font-size: 90%;
+   }
+}
+
+@media screen and (max-width: 50em) {
+ body {
+       font-size: 75%;
+   }
+}
+
+@media screen and (max-width: 30em) {
+   body {
+        font-size: 50%;
+  }
+}
+
+/*body {font-size: 100%}
+
+h1 {font-size: 2em;}
+
+@media screen and (max-width: 64em) {
+h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 50em) {
+h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 30em){
+h1 {
+    font-size: 1.5em;
+  }
+}*/
+
+.headerIndex {
+    background-color: white;
+    position: sticky;
+    top: 8px;
+    padding-bottom: 70px;
+    background-image: url(banner2.jpg);
+    z-index: 10;
+    
+}
+
+.navIndex ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    padding-bottom: 25px;
+    border-bottom: black solid 2px;
+    font-family: "titre";
+    font-weight: bolder;
+   
+}
+
+.navIndex li {
+    list-style: none;
+}
+
+.titreIndex {
+    font-size: 45px;
+    color: rgb(0, 0, 5);
+    text-shadow: 10px 5px 5px rgb(255, 255, 255);
+    box-shadow: 10px 5px 5px black;
+    margin: 0px;
+    padding: 20px 0px;
+    font-family: "titre";
+    background-image: url(banner2.jpg);
+}
+
+.linkStyle {
+    color: black;
+    text-shadow: 10px 5px 5px white;
+    font-size: 1.5em;
+}
+
+.linkStyle:hover {
+    color: rgb(255, 255, 255);
+}
+
+.linkBubble {
+    color: black;
+    font-family: "paragraphe";
+   /* text-shadow: 10px 5px 5px rgb(114, 120, 124);*/
+    font-size: 1.5em;
+}
+
+.linkBubble:hover {
+    color: rgba(0, 0, 0, 0.479);
+}
+/*GRID BULLES + IMAGE */
+
+
+.bulles {
+ /*   background: url(homme.png) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover; */
+
+    font-family: "paragraphe";
+    font-size: 2em;
+  
+  
+}
+
+/*DIV QUI ENGLOBE LES BULLES */
+@media only screen and (max-width: 960px) {
+    .bulles {
+        grid-template-columns: 0.5fr;
+        grid-template-rows: 0.5fr;
+    }
+ }
+.bubbles1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1rem;
+   /* padding-bottom: 200px;
+    margin-bottom: 300px;*/
+    margin-top: 50px;
+    
+}
+
+
+
+.imgflot {
+    display: flex;
+    justify-content: center;
+        margin:0;
+        padding:0;
+        background: no-repeat center; 
+        -webkit-background-size: cover; 
+        background-size: cover; 
+        margin-bottom: 200px;
+    }
+/*BULLES DE PENSEE */
+
+
+.oval-thought {
+    position: relative;
+    width: 270px;
+    padding: 50px 40px;
+    margin: 1em auto 80px;
+    text-align: center;
+    color: rgb(228, 243, 247);
+    background: rgb(228, 243, 247);
+    border: 5px solid rgb(193, 219, 226);
+    /* css3 */
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(228, 243, 247)), to(rgb(228, 243, 247)));
+    background: -moz-linear-gradient(rgb(228, 243, 247), rgb(228, 243, 247));
+    background: -o-linear-gradient(rgb(228, 243, 247), rgb(228, 243, 247));
+    background: linear-gradient(rgb(228, 243, 247), rgb(228, 243, 247));
+    /*
+  NOTES:
+  -webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+  -webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+  Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+  */
+    -webkit-border-top-left-radius: 220px 120px;
+    -webkit-border-top-right-radius: 220px 120px;
+    -webkit-border-bottom-right-radius: 220px 120px;
+    -webkit-border-bottom-left-radius: 220px 120px;
+    -moz-border-radius: 220px / 120px;
+    border-radius: 220px / 120px;
+}
+
+.oval-thought p {
+    font-size: 1.25em;
+}
+
+
+/* creates the larger circle */
+
+.oval-thought:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background: rgb(193, 219, 226);
+    /* css3 */
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 5px solid rgb(193, 219, 226);
+}
+
+
+/* creates the smaller circle */
+
+.oval-thought:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 30px;
+    width: 15px;
+    height: 15px;
+    background: rgb(193, 219, 226);
+    /* css3 */
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 5px solid rgb(193, 219, 226);
+}
+
+
+
+/* --------------- PAGE CV ------------------ */
+
+.banner
+{
+	background-image: url(banner2.jpg);
+	display: grid;
+	text-align: center;
+	height: 150px;
+	width: auto;
+	margin-bottom: 200px;
+	font-family: "titre";
+	font-weight: bolder;
+    margin-top: 200px;
+    margin:0px;
+    padding: 0px;
+    box-shadow : 10px 5px 5px black;
+    font-size: 65px;
+    padding-bottom: 100px;
+
+}
+
+/*TITRE PRINCIPAL */
+.entete
+{
+	font-size: 0.9em;
+	margin: 3rem;
+	font-family: "titre";
+    text-shadow: 10px 5px 5px rgb(255, 255, 255);
+    padding-bottom: 200px;
+    
+}
+
+/*INTRODUCTION*/
+.introcv
+{
+	display: flex;
+    justify-content: center;
+	font-size: 1.5em;
+    font-family: "paragraphe";
+	font-style: italic;
+	padding-left: 10rem;
+	margin-right: 10rem;
+    padding-top: 100px;
+}
+
+/* TITRES DE LA PAGE*/
+.titlecv
+{
+	display: flex;
+	justify-content: center;
+    font-family: "titre";
+    font-size: 2em;
+    margin-bottom: 75px;
+    margin-top: 150px;
+    background-color : #3b3b3b;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    color : #ddd9d9;
+  /*  padding : 3px 8px; /* haut/bas, droite/gauche (respectivement) */
+  /*  width : 98.5%;
+    margin-top : 25px;*/
+
+}
+
+/*PARAGRAPHES DE LA PAGE */
+.textecv
+{
+	display: flex;
+	line-height: 2em;
+	text-indent: 50px;
+	text-align: justify;
+	margin: 1rem;
+	font-size: 1.5em;
+	font-family: "paragraphe";
+ 
+}
+.ressourcescv {
+    display: flex;
+    justify-content: center;
+    line-height: 2em;
+	text-indent: 50px;
+    margin: 1rem;
+	font-size: 1.5em;
+	font-family: "paragraphe";
+}
+.imgleft {
+    display: flex;
+    float: left;
+    margin-right: 10px;
+ /*   max-height: 640px;
+    max-width: auto;*/
+  /*  width: 100%;
+    height: auto;*/
+    margin-left: 50px;
+    border-radius: 50px;
+    box-shadow : 10px 5px 5px rgb(158, 158, 158);
+}
+/*LISTE A PUCES*/
+.cvlist
+{
+	display: flex;
+	text-align: right;
+	line-height: 1em;
+	font-size: 1em;
+	font-family: "paragraphe";
+    margin-right: 50px;
+}
+
+.imgright {
+    display: flex;
+    float: right;
+   
+    margin-left: 10px;
+   /* width: 100%;
+    height: auto;*/
+    border-radius: 50px;
+    margin-right: 50px;
+    box-shadow : 10px 5px 5px black;
+}
+.cvtexte {
+    display: flex;
+    justify-content: left;
+    line-height: 2em;
+    text-indent: 50px;
+    font-size: 1.5em;
+    font-family: "paragraphe";
+    margin-left: 50px;
+}
+
+
+/*BOUTONS LIENS BAS DE PAGE*/
+.button
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-gap: 1rem;
+    text-align: center;
+	border-radius: 2em;
+	height: 5rem;
+	width: 100%;
+	font-family: "paragraphe";
+    margin-bottom: 200px;
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+
+
+}
+input:hover {
+    background-color: rgb(92, 4, 4);
+    color: white;
+}
+input
+{
+   
+	border-radius: 2rem;
+	font-family: "paragraphe";
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(92, 4, 4);
+    width: 100%;
+    padding: 40px;
+}
+
+ 
+
+
+/* ------------- PAGE ENTRETIENS ---------------------- */
+
+/*.bodyEntretien {
+    max-width: 80vw;
+    margin: auto;
+}*/
+
+.centered {
+    text-align: center;
+}
+
+/*.menuButton {
+    display: flex;
+    flex-direction: column;
+    max-width: 25vw;
+    margin: auto;
+    font-size: 1.5em;
+	font-family: "paragraphe";
+}
+*/
+.liensEntretien {
+    margin: 10px;
+}
+
+.navEntretien{
+    background-image: url("./banner2.jpg");
+    margin-top: 200px;
+}
+
+.navEntretien ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    padding-bottom: 25px;
+    border-bottom: black solid 2px;
+  
+}
+
+.navEntretien li {
+    list-style: none;
+}
+
+.titreEntretien {
+    margin: 0px;
+    padding: 20px 0px;
+    font-family: "titre";
+    text-shadow: 10px 5px 5px rgb(255, 255, 255);
+    font-size: 65px;
+    box-shadow : 10px 5px 5px black;
+}
+
+.texteEntretien {
+    display: flex;
+    justify-content: center;
+    font-family: "paragraphe";
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-indent: 0px;
+}
+
+
+
+/* ---------------------------------- RESEAUX ------------------------------------------ */
+.headerReseaux
+{
+	background-image: url(banner2.jpg);
+	display: flex;
+    justify-content: center;
+	height: 150px;
+	width: auto;
+	margin-bottom: 5rem;
+	font-family: "titre";
+	font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin:0px;
+    padding: 0px;
+    box-shadow : 10px 5px 5px black;
+}
+
+.titleReseaux {
+    text-shadow: 10px 5px 5px rgb(255, 255, 255);
+    font-size: 65px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root {
+   --main-radius: 10px;
+   --main-padding: 10px;
+}
+
+.container {
+    margin-top: 200px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-gap: 10px;
+   align-items: stretch;
+   font-family: "paragraphe";
+   font-weight: 800;
+   font-size: medium;
+   text-align: center;
+   justify-content: space-around;
+   /* background-image: url(modernjobsearch.png); */
+ 
+}
+
+.container>article {
+   max-width: 100%;
+}
+
+.article>img {
+   object-fit: cover;
+   width: 100%;
+   max-height: 100%;
+}
+
+.imgreseaux {
+   opacity: 0.5;
+   border-radius: 30px;
+   box-shadow: 10px 5px 5px black;
+}
+
+.imgreseaux:hover {
+   opacity: 1.0;
+   background-size: 150%;
+   background-position: center;
+   transition: 1s;
+   cursor: pointer;
+}
+
+.link {
+   color: rgb(109, 105, 105);
+}
+
+.link:hover {
+   color: rgb(0, 0, 0);
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+   background-position: 0 100%;
+   background-size: auto 6px;
+   background-repeat: repeat-x;
+   text-decoration: none;
+}
+
+.article {
+   grid-area: photo;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+}
+
+@media only screen and (max-width: 960px) {
+   .container {
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+   }
+}
+
+#box {
+   border-radius: var(--main-radius);
+   padding-top: var(--main-padding);
+   transition: 1s;
+}
+
+#box:hover {
+   transform: scale(1.1);
+}
